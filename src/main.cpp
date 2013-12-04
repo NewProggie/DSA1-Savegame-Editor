@@ -1,3 +1,6 @@
+#include <QApplication>
+#include "mainwindow.h"
+
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -125,6 +128,12 @@ struct Hero {
 using namespace std;
 
 int main(int argc, char *argv[]) {
+
+    QApplication app(argc, argv);
+    MainWindow mainWin;
+    mainWin.show();
+
+    return app.exec();
 
   /* check command line args for filename */
   if (argc != 2) {
