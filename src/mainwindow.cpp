@@ -41,4 +41,7 @@ void MainWindow::createActions() {
 void MainWindow::onOpenFileAction() {
 
     QString filename = QFileDialog::getOpenFileName(this, tr("Spielstand laden"), "", tr("DSA1-Dateiformat (*.GAM)"));
+    ifstream in(filename.toStdString().c_str(), ios::in | ios::binary);
+    in >> saveGame;
+    in.close();
 }

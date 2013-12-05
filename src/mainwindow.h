@@ -10,6 +10,7 @@
 #include <QtGui/QFileDialog>
 #include <QtGui/QMenuBar>
 #include <QtGui/QMenu>
+#include "savegame.h"
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
@@ -35,6 +36,8 @@ private:
 
     QAction *openFileAction;
     QAction *saveFileAction;
+
+    SaveGame saveGame;
 };
 
 #endif
